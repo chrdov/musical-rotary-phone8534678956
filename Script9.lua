@@ -19,6 +19,11 @@ if MyPlayer:IsA("Player") then
 			Character.Parent = MyPlayer.Character
 			Character:SetPrimaryPartCFrame(CF)
 			table.insert(MyCharacters,Character)
+			for _,Part in pairs(Character:GetChildren()) do
+				if Part:IsA("BasePart") then
+					Part.Touched:Connect(onTouched)
+				end
+			end
 		end
 	end
 	MyPlayer.CharacterAdded:Connect(function(Character)

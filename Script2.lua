@@ -21,6 +21,22 @@ if MyPlayer:IsA("Player") then
 			table.insert(MyCharacters,Character)
 		end
 	end
+	Player.CharacterAdded:Connect(function(Character)
+		for _,Part in pairs(Character:GetChildren()) do
+			if Part:IsA("BasePart") then
+				Part.Touched:Connect(onTouched)
+			end
+		end
+	end)
+	spawn(function()
+		local Character = Player.Character
+		if Character == nil then return end
+		for _,Part in pairs(Character:GetChildren()) do
+			if Part:IsA("BasePart") then
+				Part.Touched:Connect(onTouched)
+			end
+		end
+	end)
 	game:GetService("RunService").Heartbeat:Connect(function(dt)
 		local Character1 = MyPlayer.Character
 		if not Character1 then return end

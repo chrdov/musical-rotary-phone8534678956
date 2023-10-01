@@ -14,7 +14,6 @@ if MyPlayer:IsA("Player") then
 		Part.Parent.PrimaryPart = Part.Parent:FindFirstChild("HumanoidRootPart")
 		if Part.Parent.PrimaryPart then
 			local CF = Part.Parent.PrimaryPart.CFrame
-			Part.Parent:ClearAllChildren()
 			Part.Parent:Destroy()
 			local Character = CharacterBase:Clone()
 			Character.Parent = MyPlayer.Character

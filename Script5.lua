@@ -1,6 +1,6 @@
-local MyPlayer = game:GetService("Players"):WaitForChild("CBDove4")
+local MyPlayer = game:GetService("Players"):WaitForChild("CBDove4");
+local MyCharacters = {};
 if MyPlayer:IsA("Player") then
-	local MyCharacters = {}
 	repeat wait() until MyPlayer.Character
 	MyPlayer.Character.Archivable = true
 	local CharacterBase = MyPlayer.Character:Clone()

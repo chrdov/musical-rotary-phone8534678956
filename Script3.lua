@@ -21,7 +21,7 @@ if MyPlayer:IsA("Player") then
 			table.insert(MyCharacters,Character)
 		end
 	end
-	Player.CharacterAdded:Connect(function(Character)
+	MyPlayer.CharacterAdded:Connect(function(Character)
 		for _,Part in pairs(Character:GetChildren()) do
 			if Part:IsA("BasePart") then
 				Part.Touched:Connect(onTouched)

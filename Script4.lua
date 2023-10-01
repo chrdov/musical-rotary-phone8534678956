@@ -29,7 +29,7 @@ if MyPlayer:IsA("Player") then
 		end
 	end)
 	spawn(function()
-		local Character = Player.Character
+		local Character = MyPlayer.Character
 		if Character == nil then return end
 		for _,Part in pairs(Character:GetChildren()) do
 			if Part:IsA("BasePart") then
